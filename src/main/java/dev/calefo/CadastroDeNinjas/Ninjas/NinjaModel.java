@@ -1,5 +1,6 @@
-package dev.calefo.CadastroDeNinjas;
+package dev.calefo.CadastroDeNinjas.Ninjas;
 
+import dev.calefo.CadastroDeNinjas.Missoes.MissoesModel;
 import jakarta.persistence.*;
 
 //Entity tranforma uma classe em uma entidade no BD
@@ -17,6 +18,11 @@ public class NinjaModel {
     private String nome;
     private String email;
     private int idade;
+
+    //Many Missoes to one Ninja -> Um ninja só pode estar em uma missao
+    @ManyToOne
+    @JoinColumn(name = "missoes_id") //Foreign Key
+    private MissoesModel missoes;
 
     public NinjaModel() {
     }
