@@ -23,8 +23,12 @@ public class NinjaModel {
     //Tática de como o ID será gerado automaticamente
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private String nome;
+
+    @Column(unique = true)
     private String email;
+
     private int idade;
 
     //Many Missoes to one Ninja -> Um ninja só pode estar em uma missao
