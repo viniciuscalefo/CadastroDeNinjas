@@ -26,9 +26,13 @@ public class NinjaModel {
 
     private String nome;
 
+    @Column(name = "image_url")
+    private String imageUrl;
+
     @Column(unique = true)
     private String email;
 
+    @Column(name = "idade")
     private int idade;
 
     //Many Missoes to one Ninja -> Um ninja só pode estar em uma missao
