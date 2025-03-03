@@ -26,18 +26,18 @@ public class NinjaModel {
 
     private String nome;
 
-    @Column(name = "image_url")
-    private String imageUrl;
-
     @Column(unique = true)
     private String email;
 
-    @Column(name = "idade")
+    @Column (name = "img_url")
+    private String imgUrl;
+
+    @Column (name = "idade")
     private int idade;
 
-    //Many Missoes to one Ninja -> Um ninja só pode estar em uma missao
+    // @ManyToOne - Um ninja tem uma unica missao
     @ManyToOne
-    @JoinColumn(name = "missoes_id") //Foreign Key
+    @JoinColumn(name = "missoes_id") // Foreing Key ou chave estrangeira
     private MissoesModel missoes;
 
 }

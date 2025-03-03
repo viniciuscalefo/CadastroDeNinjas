@@ -1,4 +1,4 @@
 package dev.calefo.CadastroDeNinjas.Ninjas;
 
-public class NInjaService {
+public class NinjaService {
 }
