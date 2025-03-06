@@ -3,7 +3,7 @@ package dev.calefo.CadastroDeNinjas.Ninjas;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping
+@RequestMapping("/ninjas")
 public class NinjaController {
 
     @GetMapping("/boasvindas")
@@ -11,33 +11,28 @@ public class NinjaController {
         return "Essa é minha primeira mensagem na API";
     }
 
-    //Add Ninja (CREATE)
-    @PostMapping("/criar")
-    public String criarNinjas(){
-        return "Ninja Criado";
+    // Mostrar todos os ninjas (READ)
+    @GetMapping("/listar")
+    public String mostrarTodosOsNinjas() {
+        return "Mostrar Ninja";
     }
 
-    //Mostrar todos os Ninjas (READ)
-    @GetMapping("/todos")
-    public String mostrarTodosOsNinjas(){
-        return "Mostrando todos os Ninjas";
+    // Mostrar ninja  por id (READ)
+    @GetMapping("/listarID")
+    public String mostrarTodosOsNinjasPorId() {
+        return "Mostrar Ninja por id";
     }
 
-    //Mostrar Ninja por ID (READ)
-    @GetMapping("/todosID")
-    public String mostrarTodosOsNinjasporID(){
-        return "Mostran Ninjas por ID";
-    }
-
-    //Alterar dados dos Ninjas (UPDATE)
+    // Alterar dados dos ninjas (UPDATE)
     @PutMapping("/alterarID")
-    public String alterarNinjaPorID(){
-        return "Deletar ninja por ID";
+    public String alterarNinjaPorId() {
+        return "Alterar Ninja por id";
     }
 
-    //Deletar Ninja (DELETE)
+    // Deletar Ninja (DELETE)
     @DeleteMapping("/deletarID")
-    public String deletarNinjaPorID(){
-        return "Deletar Ninjas por ID";
+    public String deletarNinjaPorId() {
+        return "Ninja deletado por id";
     }
+
 }
