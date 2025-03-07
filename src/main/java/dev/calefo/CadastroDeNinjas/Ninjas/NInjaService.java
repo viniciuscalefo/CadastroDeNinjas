@@ -23,4 +23,16 @@ public class NinjaService {
         Optional<NinjaModel> ninjaPorID = ninjaRepository.findById(id);
         return ninjaPorID.orElse(null);
     }
+
+    //Criar um novo Ninja
+    public NinjaModel criarNinja(NinjaModel ninja){
+        return ninjaRepository.save(ninja);
+    }
+
+    //Deletar um Ninja
+    public void deletarNinjasPorId(Long id){
+        ninjaRepository.deleteById(id);
+
+    }
+
 }
