@@ -7,7 +7,7 @@ public class NinjaMapper {
 
     public NinjaModel map(NinjaDTO ninjaDTO) {
         NinjaModel ninjaModel = new NinjaModel();
-        ninjaModel.setId(ninjaDTO.getId());  // Corrigido: ninjaDTO em vez de NinjaDTO
+        ninjaModel.setId(ninjaDTO.getId());
         ninjaModel.setNome(ninjaDTO.getNome());
         ninjaModel.setEmail(ninjaDTO.getEmail());
         ninjaModel.setIdade(ninjaDTO.getIdade());
@@ -20,7 +20,7 @@ public class NinjaMapper {
 
     public NinjaDTO map(NinjaModel ninjaModel) {
         NinjaDTO ninjaDTO = new NinjaDTO();
-        ninjaDTO.setId(ninjaModel.getId());  // Corrigido: ninjaModel em vez de NinjaModel
+        ninjaDTO.setId(ninjaModel.getId());
         ninjaDTO.setNome(ninjaModel.getNome());
         ninjaDTO.setEmail(ninjaModel.getEmail());
         ninjaDTO.setIdade(ninjaModel.getIdade());
