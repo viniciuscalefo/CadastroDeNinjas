@@ -9,7 +9,7 @@ import java.util.List;
 @RestController //Fala que tudo que está abaixo sera um controller
 @RequestMapping("missoes") //Começa a mapear as APIs
 public class MissoesController {
-    private  MissoesService missoesService;
+    private  final MissoesService missoesService;
 
     public MissoesController(MissoesService missoesService) {
         this.missoesService = missoesService;
